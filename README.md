@@ -24,15 +24,18 @@ event_data/2018-11-09-events.csv
 ## Example queries
 
 Give me the artist, song title and song's length in the music app history that was heard during sessionId = 338, and itemInSession = 4
-Here as we want data to be filter out by sessionid and itemInSession, those two are being used as partition key.
+* Here as we want data to be filter out by sessionid and itemInSession, those two are being used as partition key.
+
 `"SELECT artist, song, length FROM song_detail WHERE sessionid=338 and iteminsession=4"`
 
 Give me only the following: name of artist, song (sorted by itemInSession) and user (first and last name) for userid = 10, sessionid = 182
-Here as we want data by userid and session id, those two are used as partition key and itemInSession is used as clustering column to sort data by itemInSession.
+* Here as we want data by userid and session id, those two are used as partition key and itemInSession is used as clustering column to sort data by itemInSession.
+
 `"SELECT artist, song, first, last FROM song_by_user WHERE sessionid=182 and userid=10"`
 
 Give me every user name (first and last) in my music app history who listened to the song 'All Hands Against His Own'
-Here song is used as partition key as we want to filter out data by song and userid is used as clustering column to make primary key unique.
+* Here song is used as partition key as we want to filter out data by song and userid is used as clustering column to make primary key unique.
+
  `"SELECT first, last, song FROM user_by_song WHERE song='All Hands Against His Own'"`
 
 <br>
