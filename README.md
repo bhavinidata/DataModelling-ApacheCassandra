@@ -11,7 +11,7 @@ They'd like a data engineer to create an Apache Cassandra database which can cre
 - Process dataset to create a denormalized dataset. 
 - Iterate through each event file in event_data to process and create a new CSV file in Python. Below is the example of how file data looks like:
 
-![](image_event_datafile_new.png?raw=true)
+![](image_event_datafile_new.jpg?raw=true)
 
 - Model data by creating tables in Apache Cassandra to run queries for a particular analytic focus.
 - Build an ETL pipeline that transfers data from a set of CSV files within a directory to create a streamlined CSV file to model and insert data into Apache Cassandra tables using python and CQL.
