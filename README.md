@@ -9,7 +9,10 @@ They'd like a data engineer to create an Apache Cassandra database which can cre
 
 ## Tasks
 - Process dataset to create a denormalized dataset. 
-- Iterate through each event file in event_data to process and create a new CSV file in Python
+- Iterate through each event file in event_data to process and create a new CSV file in Python. Below is the example of how file data looks like:
+
+![](image_event_datafile_new.png?raw=true)
+
 - Model data by creating tables in Apache Cassandra to run queries for a particular analytic focus.
 - Build an ETL pipeline that transfers data from a set of CSV files within a directory to create a streamlined CSV file to model and insert data into Apache Cassandra tables using python and CQL.
 - Execute queries successfully for analysis puporse.
@@ -20,6 +23,14 @@ The directory of CSV files partitioned by date. Here are examples of filepaths t
 event_data/2018-11-08-events.csv
 event_data/2018-11-09-events.csv
 
+## Steps to create an Apache Cassandra database and run the ETL Pipeline:
+
+* Write logic to iterate through each event file and creare a csv file object and run.
+* Create a Keyspace in Apache Cassandra.
+* Write out your Create Table statements.
+* Load the data with Insert statement for the created tables
+* Execute qureries and verify the results.
+* Close Session and close connection.
 
 ## Example queries
 
@@ -40,12 +51,4 @@ Give me every user name (first and last) in my music app history who listened to
 
 <br>
 
-## Steps to create an Apache Cassandra database and run the ETL Pipeline:
 
-
-* Write logic to iterate through each event file and creare a csv file object and run.
-* Create a Keyspace in Apache Cassandra.
-* Write out your Create Table statements.
-* Load the data with Insert statement for the created tables
-* Execute qureries and verify the results.
-* Close Session and close connection.
